@@ -13,65 +13,43 @@ Most portfolio tools either:
 - stay purely “strategic” (set-and-forget) and ignore the current cycle, or
 - go fully “tactical” with opaque black-box predictions.
 
-This app aims for a pragmatic middle-ground:
+This app targets a pragmatic middle-ground, but it is explicitly designed around one dominant source of uncertainty today: the **AI bubble / AI-driven market regime**.
+
+The AI bubble is not just “tech concentration” or “chips supply constraints”. It is also a **financial equilibrium** built on:
+- **Extreme valuation dispersion and multiple expansion** in AI-related equities (and adjacent infrastructure plays),
+- **High capital intensity** (compute, datacenters, energy, memory) that can absorb a large share of investment flows,
+- **Profitability and break-even uncertainty** for many AI business models (especially at the application layer),
+- **Cost-of-capital sensitivity** (rates/credit conditions) that can quickly reprice long-duration growth assets,
+- **Second-order spillovers**: index concentration, factor crowding, capex cycles, and broader macro feedback loops.
+
+The product goal is not to “predict the top”, but to help users **manage portfolios and expectations under AI-bubble uncertainty** using transparent, bounded signals:
+
 - **Strategic Allocation (SAA)** as the anchor,
-- **Tactical Overlay (TAA)** as small, bounded tilts based on transparent signals,
-- plus an **AI-cycle overlay** that explicitly addresses concentration and semiconductor/memory supply-chain dynamics that can spill over into broader equity performance and macro conditions. (Recent reporting highlights memory supply constraints and production shifts toward AI-related HBM as a real macro/industry factor.) :contentReference[oaicite:0]{index=0}
-
----
-
-## Product definition
-
-### Advanced mode (finance-savvy users)
-**Minimal inputs**
-- Base currency (e.g., EUR, USD)
-- Risk profile (Conservative / Moderate / Aggressive)
-- Horizon (years)
-- Current portfolio (tickers + weights) **or** “use model portfolio”
-- Constraints (optional): max tech %, no EM, UCITS-only, min bond quality, etc.
-
-**Minimal outputs**
-- Target weights by **asset class** and **region**
-- Suggested trades/rebalance actions (what to buy/sell)
-- A **clear explanation** referencing the exact signals used (macro regime + AI-cycle dashboard)
-- Scenario Engine results (portfolio sensitivity / drawdown expectations under shocks)
-
-### Light mode (FIRE democratization)
-A user-friendly flow that avoids detailed portfolio inputs.
-
-**Light-mode questions (example)**
-- Intention: FIRE / wealth accumulation / capital preservation
-- Age
-- Monthly budget / contribution
-- “How much drawdown can you tolerate?” (plain-language choices)
-- Time horizon
-- Current savings/investments (rough bands)
-- Region preference (home bias vs global)
-- Optional: “Do you want simplicity above all?” (yes/no)
-
-**Light-mode outputs**
-- A recommended “starter” allocation template (regions + asset classes)
-- Simple explanations and action steps
-- A simplified scenario view (“what if markets drop 30%?”)
+- **Tactical Overlay (TAA)** as small, bounded tilts based on interpretable signals,
+- an **AI Bubble Overlay** that explicitly models the *valuation + funding + concentration + supply-chain* nexus,
+- and a **Scenario Studio** to stress-test the portfolio under plausible AI-bubble unwind paths.
 
 ---
 
 ## Core features
 
-- **Macro/Market Regime Dashboard**: growth, inflation, rates/curve, financial stress.
+- **Macro/Market Regime Dashboard**: growth, inflation, rates/curve, financial stress, liquidity proxies.
 - **Regional Allocation Engine**: US vs Europe vs Japan vs EM tilts with guardrails.
-- **AI-Cycle Overlay**:
-  - **Market concentration risk** (e.g., top holdings dominance; optional equal-weight/alt exposure prompts). :contentReference[oaicite:1]{index=1}
-  - **Supply-chain stress proxies** (memory/HBM constraints, capex intensity, spillovers). :contentReference[oaicite:2]{index=2}
-  - **Expectations risk** via scenarios (AI drawdown, multiple compression, etc.).
+- **AI Bubble Overlay** (multi-pillar, transparent):
+  - **Concentration & crowding risk**: index/mega-cap dominance, factor exposure, optional prompts (equal-weight, diversifiers, ex-tech constraints).
+  - **Valuation & duration risk**: repricing sensitivity (multiple compression / long-duration equity exposure), “expectations vs cash-flow reality” flags.
+  - **Funding & capital intensity**: capex cycle proxies (datacenter buildout, compute supply, energy/memory bottlenecks) and implications for margins and macro.
+  - **Profitability gap tracking**: signals that separate “revenue growth” from “path to sustainable margins”.
+  - **Contagion scenarios**: how an AI-led drawdown propagates to broader equities, credit, and risk premia.
 - **Market Notes Tab** (plain-English bullets by bucket):
-  - S&P 500 / US equities
+  - S&P 500 / US equities (with AI-bubble framing)
   - Europe / Japan / EM equities
-  - Bonds (gov/IG/HY), duration
-  - Gold / cash
+  - Bonds (gov/IG/HY), duration and equity-hedge role
+  - Gold / cash / defensive diversifiers
   - “Based on current signals, consider increasing/reducing weight” with rationale
 - **Scenario Engine**: coherent shock sets and portfolio response (drawdown, volatility, contribution to risk).
-- **Auditability**: every recommendation is reproducible from stored signals + parameters.
+- **Auditability**: every recommendation is reproducible from stored signals + parameters (no black-box calls).
+
 
 ---
 
