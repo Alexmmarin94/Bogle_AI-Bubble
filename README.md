@@ -352,4 +352,3 @@ This is a first proposal and will evolve as the app matures.
 Choose a permissive license (MIT/Apache-2.0) unless you plan to commercialize.
 ```
 
-If you want, I can also generate a `tickers_universe.yaml` starter (regional ETFs + bond buckets + gold/cash proxies) and a “v1 regime signals” list (exact FRED series IDs + ECB flows) so the repo becomes runnable quickly.
