@@ -1,0 +1,66 @@
+series:
+  # -----------------------------
+  # ECB Yield Curve (Euro area)
+  # Dataset: YC
+  # -----------------------------
+  - id: EUR_YC_2Y
+    dataflow: YC
+    key: B.U2.EUR.4F.G_N_A.SV_C_YM.SR_2Y
+    frequency: B
+    backfill_start: "1999-01-04"
+    description: "Euro area yield curve spot rate, 2-year, business day"
+    use_in_daily_state: true
+
+  - id: EUR_YC_10Y
+    dataflow: YC
+    key: B.U2.EUR.4F.G_N_A.SV_C_YM.SR_10Y
+    frequency: B
+    backfill_start: "1999-01-04"
+    description: "Euro area yield curve spot rate, 10-year, business day"
+    use_in_daily_state: true
+
+  - id: EUR_YC_30Y
+    dataflow: YC
+    key: B.U2.EUR.4F.G_N_A.SV_C_YM.SR_30Y
+    frequency: B
+    backfill_start: "1999-01-04"
+    description: "Euro area yield curve spot rate, 30-year, business day"
+    use_in_daily_state: true
+
+  # -----------------------------
+  # HICP YoY (Euro area)
+  # Dataset: ICP
+  # -----------------------------
+  - id: EUR_HICP_YOY
+    dataflow: ICP
+    key: M.U2.N.000000.4.ANR
+    frequency: M
+    backfill_start: "1996-01-01"
+    description: "Euro area HICP - Overall index, annual rate of change (YoY)"
+    use_in_daily_state: true
+
+  # -----------------------------
+  # FX reference rates (optional)
+  # Dataset: EXR
+  # -----------------------------
+  - id: USD_PER_EUR_DAILY
+    dataflow: EXR
+    key: D.USD.EUR.SP00.A
+    frequency: D
+    description: "USD per EUR (ECB reference rate), daily"
+    use_in_daily_state: false
+
+  - id: GBP_PER_EUR_DAILY
+    dataflow: EXR
+    key: D.GBP.EUR.SP00.A
+    frequency: D
+    description: "GBP per EUR (ECB reference rate), daily"
+    use_in_daily_state: false
+
+  - id: JPY_PER_EUR_DAILY
+    dataflow: EXR
+    key: D.JPY.EUR.SP00.A
+    frequency: D
+    description: "JPY per EUR (ECB reference rate), daily"
+    use_in_daily_state: false
+

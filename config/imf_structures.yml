@@ -1,0 +1,27 @@
+structures:
+  - id: IMF_DATAFLOW_FULL
+    resource: dataflow
+    agency: IMF
+    flow: all
+    version: latest
+    detail: full
+    references: all
+    format: sdmx-2.1
+
+  - id: IMF_CODELIST_FULL
+    resource: codelist
+    agency: IMF
+    flow: all
+    version: latest
+    detail: full
+    references: all
+    format: sdmx-2.1
+
+  - id: IMF_DSD_FULL
+    resource: datastructure
+    agency: IMF
+    flow: all
+    version: latest
+    detail: full
+    references: all
+    format: sdmx-2.1

@@ -1,0 +1,27 @@
+tickers:
+  - SPY
+  - QQQ
+  - RSP
+  - SOXX
+  - XLK
+  - GLD
+  - DBC
+  - TIP
+  - IEF
+  - TLT
+  - IEFA
+  - IEMG
+  - VTI
+  - VXUS
+
+  # Optional "cash" / short-duration proxies (context + robustness)
+  - BIL
+  - SHV
+  - VGSH
+
+  # Optional duration ladder proxies (context)
+  - VGIT
+  - VGLT
+
+  # Optional TIPS ETF proxy (context; complements DFII10/T10YIE/T5YIFR)
+  - SCHP

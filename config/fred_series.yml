@@ -1,0 +1,81 @@
+series:
+  # --- Risk / volatility ---
+  - id: VIXCLS
+    backfill_start: "1990-01-02"
+    name: "CBOE Volatility Index (VIX)"
+    group: "risk"
+
+  # --- Credit spreads ---
+  - id: BAMLH0A0HYM2
+    backfill_start: "1996-12-31"
+    name: "ICE BofA US High Yield OAS"
+    group: "credit"
+
+  - id: BAMLC0A0CM
+    backfill_start: "1996-12-31"
+    name: "ICE BofA US Corporate (IG) OAS"
+    group: "credit"
+
+  # --- Financial conditions ---
+  - id: NFCI
+    backfill_start: "1971-01-08"
+    name: "Chicago Fed National Financial Conditions Index"
+    group: "financial_conditions"
+
+  - id: STLFSI4
+    backfill_start: "1993-01-01"
+    name: "St. Louis Fed Financial Stress Index"
+    group: "financial_conditions"
+
+  # --- Rates / curve ---
+  - id: DGS2
+    backfill_start: "1976-01-02"
+    name: "2-Year Treasury Constant Maturity Rate"
+    group: "rates"
+
+  - id: DGS3MO
+    backfill_start: "1982-01-04"
+    name: "3-Month Treasury Constant Maturity Rate"
+    group: "rates"
+
+  - id: DGS5
+    backfill_start: "1976-01-02"
+    name: "5-Year Treasury Constant Maturity Rate"
+    group: "rates"
+
+  - id: DGS10
+    backfill_start: "1962-01-02"
+    name: "10-Year Treasury Constant Maturity Rate"
+    group: "rates"
+
+  - id: DGS30
+    backfill_start: "1977-02-15"
+    name: "30-Year Treasury Constant Maturity Rate"
+    group: "rates"
+
+  - id: T10Y3M
+    backfill_start: "1982-01-04"
+    name: "10Y minus 3M Treasury (curve slope)"
+    group: "rates"
+
+  # --- Inflation expectations / real yields ---
+  - id: DFII10
+    backfill_start: "2003-01-02"
+    name: "10Y Real Yield (TIPS, constant maturity)"
+    group: "inflation"
+
+  - id: T10YIE
+    backfill_start: "2003-01-02"
+    name: "10-Year Breakeven Inflation Rate"
+    group: "inflation"
+
+  - id: T5YIFR
+    backfill_start: "2003-01-02"
+    name: "5Y5Y Forward Inflation Expectation Rate"
+    group: "inflation"
+
+  # --- FX ---
+  - id: DTWEXBGS
+    backfill_start: "1973-01-02"
+    name: "Trade Weighted U.S. Dollar Index: Broad"
+    group: "fx"

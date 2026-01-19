@@ -1,0 +1,36 @@
+
+companies:
+  - name: "Microsoft"
+    ticker: "MSFT"
+    cik: "0000789019"
+    capex_tag: "PaymentsToAcquirePropertyPlantAndEquipment"
+    revenue_tag: "Revenues"
+    units: ["USD"]
+
+  - name: "Alphabet"
+    ticker: "GOOGL"
+    cik: "0001652044"
+    capex_tag: "PaymentsToAcquirePropertyPlantAndEquipment"
+    revenue_tag: "Revenues"
+    units: ["USD"]
+
+  - name: "Amazon"
+    ticker: "AMZN"
+    cik: "0001018724"
+    capex_tag: "PaymentsToAcquirePropertyPlantAndEquipment"
+    revenue_tag: "Revenues"
+    units: ["USD"]
+
+  - name: "Meta"
+    ticker: "META"
+    cik: "0001326801"
+    capex_tag: "PaymentsToAcquirePropertyPlantAndEquipment"
+    revenue_tag: "Revenues"
+    units: ["USD"]
+
+  - name: "NVIDIA"
+    ticker: "NVDA"
+    cik: "0001045810"
+    capex_tag: "PaymentsToAcquirePropertyPlantAndEquipment"
+    revenue_tag: "Revenues"
+    units: ["USD"]
