@@ -31,7 +31,7 @@
     }
   },
   "market_regime": {
-    "stress_score": 34.67461787701461,
+    "stress_score": 34.67461787701464,
     "stress_bucket": "LOW_STRESS",
     "persistence": {
       "window_days": 7,
@@ -83,13 +83,13 @@
         "raw_direction": "TILT_TOWARD",
         "persisted_direction": "TILT_TOWARD",
         "magnitude": "MEDIUM",
-        "score": 0.4243293759810311,
+        "score": 0.4243293759810304,
         "inputs": {
           "stress_bucket": "LOW_STRESS",
           "spy_200d_trend": 0.09659892423034133,
           "spy_momentum_3m": 0.050020874798634374,
           "spy_momentum_12m": 0.18046902354793004,
-          "spy_realized_vol_21d_ann": 0.081543610059825,
+          "spy_realized_vol_21d_ann": 0.08154361005982541,
           "cash_yield_3m": 3.68,
           "t10y3m": 0.57
         },
@@ -110,13 +110,13 @@
         "raw_direction": "TILT_TOWARD",
         "persisted_direction": "TILT_TOWARD",
         "magnitude": "MEDIUM",
-        "score": 0.5553310989998124,
+        "score": 0.5553310989998138,
         "inputs": {
           "dgs5": 3.77,
           "dgs10": 4.17,
           "dgs30": 4.79,
           "dgs10_change_30d": 0.11000000000000032,
-          "rate_vol_63d": 0.030728125342669915,
+          "rate_vol_63d": 0.030728125342669794,
           "t10y3m": 0.57,
           "stress_bucket": "LOW_STRESS"
         },
@@ -170,11 +170,11 @@
         "raw_direction": "TILT_AWAY",
         "persisted_direction": "TILT_AWAY",
         "magnitude": "MEDIUM",
-        "score": -0.4427449044658233,
+        "score": -0.44274490446582326,
         "inputs": {
           "stress_bucket": "LOW_STRESS",
           "concentration_composite": 1.7599950392643642,
-          "usd_strength_z": 0.6849742976648817,
+          "usd_strength_z": 0.6849742976648815,
           "ai_fundamentals_heat": 0.567550505050505,
           "ai_fundamentals_heat_used": null,
           "ai_fundamentals_coverage_ratio": 0.4,
@@ -210,31 +210,31 @@
     "stress_score_recent": [
       {
         "date": "2026-01-08",
-        "stress_score": 35.48179222304953
+        "stress_score": 35.48179222304955
       },
       {
         "date": "2026-01-09",
-        "stress_score": 34.71110771073106
+        "stress_score": 34.711107710731085
       },
       {
         "date": "2026-01-12",
-        "stress_score": 34.88929011500301
+        "stress_score": 34.88929011500303
       },
       {
         "date": "2026-01-13",
-        "stress_score": 35.24606884178894
+        "stress_score": 35.24606884178896
       },
       {
         "date": "2026-01-14",
-        "stress_score": 35.31099361083588
+        "stress_score": 35.3109936108359
       },
       {
         "date": "2026-01-15",
-        "stress_score": 34.706467464706265
+        "stress_score": 34.70646746470629
       },
       {
         "date": "2026-01-16",
-        "stress_score": 34.67461787701461
+        "stress_score": 34.67461787701464
       }
     ]
   },
