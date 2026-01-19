@@ -1,0 +1,20 @@
+# === App runtime (Streamlit UI) ===
+streamlit==1.47.0          # Web app framework
+
+# === Core data stack ===
+pandas==2.3.1              # DataFrames used across pages
+numpy==2.2.6               # Numeric computations
+
+# === Storage / parquet IO ===
+pyarrow==21.0.0            # Parquet read/write (pd.read_parquet)
+
+# === Charts ===
+plotly==6.2.0              # All interactive charts (plotly.graph_objects)
+
+# === HTTP (optional but commonly needed) ===
+requests==2.32.4           # Used if any script/page pulls remote resources
+
+# === Date utilities (pandas dependency, but safe to pin explicitly) ===
+python-dateutil==2.8.2     # Robust datetime parsing/handling
+pytz==2025.2               # Timezone support
+tzdata==2025.2             # Timezone database for some environments
