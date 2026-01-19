@@ -1,0 +1,14 @@
+{
+  "start_date": "2012-01-01",
+  "tickers": [
+    "VT",
+    "VTI",
+    "VXUS",
+    "BND"
+  ],
+  "panel_start": "2012-01-03",
+  "panel_end": "2026-01-16",
+  "rows_prices": 3531,
+  "rows_returns": 3530,
+  "notes": "Prices use adjClose if present, otherwise close."
+}
