@@ -1,0 +1,3 @@
+# IMF structures are stored outside git (GitHub Releases)
+data/raw/imf/structures/*.xml
+data/raw/imf/structures/*.xml.gz
