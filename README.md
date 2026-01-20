@@ -205,7 +205,7 @@ The IMF structure files are large and are handled outside the normal git-tracked
 
 ---
 
-## Deterministic Logic Used (high-level)
+## Deterministic Logic Used (high-level, but technically specific)
 
 Everything in this system is intentionally **deterministic**: the same inputs produce the same outputs, and every transformation is auditable.
 
@@ -216,9 +216,13 @@ The implementation details are documented in the **Resources tab** and `content/
 Many inputs are on incomparable scales (yields vs spreads vs returns vs ratios). To make them composable:
 
 - **Rolling z-scores** are used where “distance from a recent baseline” matters.  
-  Example: take a signal \( x_t \) and compute  
-  \[ z_t = (x_t - \mu_{t,w}) / \sigma_{t,w} \]  
-  for a window \( w \), producing a unitless measure of “how extreme” the current value is relative to recent history.
+  Example: take a signal $x_t$ and compute  
+  
+```math
+z_t = (x_t - \mu_{t,w}) / \sigma_{t,w}
+```
+  
+  for a window $w$, producing a unitless measure of “how extreme” the current value is relative to recent history.
 
 - **Percentile mapping** is used where robustness to distribution shape matters (heavy tails, skew).  
   Example: map the current value to its empirical percentile within a rolling window, then scale to 0–100.  
@@ -267,17 +271,19 @@ Conceptually:
 - Past BAU, an additional “extra term” grows **convexly**, discouraging aggressive moves unless multiple conditions align.
 
 A common convex penalty family is quadratic (L2), e.g.:
-\[
+
+```math
 \text{penalty}(d) = 
 \begin{cases}
 0, & |d| \le b \\
 \lambda (|d| - b)^2, & |d| > b
 \end{cases}
-\]
+```
+
 where:
-- \( d \) is the move size (in percentage points),
-- \( b \) is the BAU band threshold,
-- \( \lambda \) controls how quickly “extra justification” grows.
+- $d$ is the move size (in percentage points),
+- $b$ is the BAU band threshold,
+- $\lambda$ controls how quickly “extra justification” grows.
 
 Why this matters:
 - It hard-codes the idea that **beyond-normal moves require disproportionately stronger evidence**.
