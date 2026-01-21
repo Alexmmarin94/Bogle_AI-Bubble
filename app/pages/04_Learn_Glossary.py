@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # app/pages/04_Resources.py
-# Comments in English as requested.
 
 from __future__ import annotations
 
