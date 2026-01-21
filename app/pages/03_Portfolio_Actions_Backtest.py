@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # app/pages/03_Portfolio_Actions_Backtest.py
-# Comments in English as requested.
 
 from __future__ import annotations
 
