@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# Comments in English as requested.
 
 from __future__ import annotations
 
