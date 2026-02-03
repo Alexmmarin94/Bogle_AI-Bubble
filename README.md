@@ -24,9 +24,6 @@ In many real settings, the hard part is not “adding ML,” but **defining the 
 **👉 Streamlit App:** https://bogleai-bubble-3gnctcftcpciv3izgvssyt.streamlit.app/
 
 > ⚠️ The app may occasionally appear inactive due to Streamlit Cloud sleeping from inactivity.  
-> Unlike one-shot demos, this project runs **daily data sync**, so it is likely to be awake most of the time.  
-> If you ever find it asleep and want it woken up quickly, contact: **alexbmeist@gmail.com**
-
 ---
 
 ## What This Project Is (and Is Not)
