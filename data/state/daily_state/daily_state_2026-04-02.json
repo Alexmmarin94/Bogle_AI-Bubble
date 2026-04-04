@@ -31,7 +31,7 @@
     }
   },
   "market_regime": {
-    "stress_score": 47.743614547788596,
+    "stress_score": 47.71735304169973,
     "stress_bucket": "LOW_STRESS",
     "persistence": {
       "window_days": 7,
@@ -83,7 +83,7 @@
         "raw_direction": "HOLD",
         "persisted_direction": "TILT_AWAY",
         "magnitude": "SMALL",
-        "score": -0.19586906495159645,
+        "score": -0.19580788538419547,
         "inputs": {
           "stress_bucket": "LOW_STRESS",
           "spy_200d_trend": -0.007466075914160264,
@@ -110,13 +110,13 @@
         "raw_direction": "HOLD",
         "persisted_direction": "HOLD",
         "magnitude": "SMALL",
-        "score": 0.16559361758055877,
+        "score": 0.17498412757600715,
         "inputs": {
-          "dgs5": 3.97,
-          "dgs10": 4.33,
-          "dgs30": 4.91,
-          "dgs10_change_30d": 0.25,
-          "rate_vol_63d": 0.0437784568935664,
+          "dgs5": 3.94,
+          "dgs10": 4.31,
+          "dgs30": 4.88,
+          "dgs10_change_30d": 0.22999999999999954,
+          "rate_vol_63d": 0.043866997037355165,
           "t10y3m": 0.61,
           "stress_bucket": "LOW_STRESS"
         },
@@ -141,12 +141,12 @@
         "raw_direction": "TILT_TOWARD",
         "persisted_direction": "TILT_TOWARD",
         "magnitude": "MEDIUM",
-        "score": 0.544533599213809,
+        "score": 0.5519345289750978,
         "inputs": {
           "t10y_breakeven": 2.34,
           "t10y_breakeven_change_30d": 0.04999999999999982,
-          "dfii10_real_yield": 2.02,
-          "dfii10_real_yield_change_30d": 0.22999999999999998,
+          "dfii10_real_yield": 1.97,
+          "dfii10_real_yield_change_30d": 0.17999999999999994,
           "t5y5y_forward_infl": 2.11
         },
         "rules": {
@@ -234,7 +234,7 @@
       },
       {
         "date": "2026-04-02",
-        "stress_score": 47.743614547788596
+        "stress_score": 47.71735304169973
       }
     ]
   },
