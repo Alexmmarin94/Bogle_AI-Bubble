@@ -110,7 +110,7 @@
         "raw_direction": "HOLD",
         "persisted_direction": "HOLD",
         "magnitude": "SMALL",
-        "score": 0.17027272146199995,
+        "score": 0.17018619817702346,
         "inputs": {
           "dgs5": 4.15,
           "dgs10": 4.45,
@@ -141,10 +141,10 @@
         "raw_direction": "TILT_TOWARD",
         "persisted_direction": "TILT_TOWARD",
         "magnitude": "MEDIUM",
-        "score": 0.664739562310924,
+        "score": 0.6487971533631568,
         "inputs": {
-          "t10y_breakeven": 2.39,
-          "t10y_breakeven_change_30d": 0.0,
+          "t10y_breakeven": 2.38,
+          "t10y_breakeven_change_30d": -0.010000000000000231,
           "dfii10_real_yield": 2.06,
           "dfii10_real_yield_change_30d": 0.13000000000000012,
           "t5y5y_forward_infl": 2.24
