@@ -7,8 +7,8 @@
     "BND"
   ],
   "panel_start": "2012-01-03",
-  "panel_end": "2026-09-03",
-  "rows_prices": 3689,
-  "rows_returns": 3688,
+  "panel_end": "2026-09-04",
+  "rows_prices": 3690,
+  "rows_returns": 3689,
   "notes": "Prices use adjClose if present, otherwise close."
 }
