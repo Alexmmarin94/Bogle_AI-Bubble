@@ -141,13 +141,13 @@
         "raw_direction": "TILT_TOWARD",
         "persisted_direction": "TILT_TOWARD",
         "magnitude": "LARGE",
-        "score": 0.8216650677113319,
+        "score": 0.8088971075994843,
         "inputs": {
           "t10y_breakeven": 2.36,
           "t10y_breakeven_change_30d": 0.08999999999999986,
           "dfii10_real_yield": 2.55,
           "dfii10_real_yield_change_30d": 0.13999999999999968,
-          "t5y5y_forward_infl": 2.34
+          "t5y5y_forward_infl": 2.32
         },
         "rules": {
           "intent": {
