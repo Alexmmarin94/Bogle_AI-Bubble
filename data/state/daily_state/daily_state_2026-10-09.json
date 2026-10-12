@@ -31,7 +31,7 @@
     }
   },
   "market_regime": {
-    "stress_score": 38.6634990664438,
+    "stress_score": 38.40798758597833,
     "stress_bucket": "LOW_STRESS",
     "persistence": {
       "window_days": 7,
@@ -234,7 +234,7 @@
       },
       {
         "date": "2026-10-09",
-        "stress_score": 38.6634990664438
+        "stress_score": 38.40798758597833
       }
     ]
   },
