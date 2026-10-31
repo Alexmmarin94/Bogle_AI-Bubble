@@ -10,6 +10,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 import pandas as pd
+import pyarrow.parquet as pq
 
 try:
     import yaml  # type: ignore
@@ -64,6 +65,13 @@ class Policy:
 # -----------------------------
 # IO helpers
 # -----------------------------
+
+def read_parquet_local(path: Path) -> pd.DataFrame:
+    """Read a local Parquet file synchronously and close it before returning."""
+    with pq.ParquetFile(str(path)) as parquet_file:
+        table = parquet_file.read(use_threads=False)
+        return table.to_pandas(use_threads=False)
+
 
 def repo_root() -> Path:
     return Path(__file__).resolve().parents[1]
@@ -175,7 +183,7 @@ def load_tiingo_prices(root: Path, tickers: List[str]) -> Dict[str, pd.DataFrame
         p = tiingo_dir / f"{t}.parquet"
         if not p.exists():
             continue
-        df = pd.read_parquet(p)
+        df = read_parquet_local(p)
         if df.empty:
             continue
         df = df.copy()
@@ -198,7 +206,7 @@ def load_fred_series(root: Path, series_ids: List[str]) -> Dict[str, pd.Series]:
         p = fred_dir / f"{sid}.parquet"
         if not p.exists():
             continue
-        df = pd.read_parquet(p)
+        df = read_parquet_local(p)
         if df.empty:
             continue
         df = df.copy()
@@ -219,7 +227,7 @@ def load_ecb_series(root: Path) -> Dict[str, pd.Series]:
     if not ecb_dir.exists():
         return out
     for p in ecb_dir.glob("*.parquet"):
-        df = pd.read_parquet(p)
+        df = read_parquet_local(p)
         if df.empty or "date" not in df.columns or "value" not in df.columns:
             continue
         df = df.copy()
@@ -1042,7 +1050,7 @@ def _load_core_calendar(root: Path, start_date: str) -> pd.DatetimeIndex:
         p = root / "data" / "raw" / "tiingo" / f"{t}.parquet"
         if not p.exists():
             raise RuntimeError(f"Missing core Tiingo parquet: {p}")
-        df = pd.read_parquet(p)
+        df = read_parquet_local(p)
         df["date"] = pd.to_datetime(df["date"], errors="coerce")
         df = df.dropna(subset=["date"])
         dti = pd.DatetimeIndex(df["date"].dt.tz_localize(None) if getattr(df["date"].dt, "tz", None) is not None else df["date"])
@@ -1164,7 +1172,7 @@ def main() -> None:
     existing_dates: set[str] = set()
     if out_path.exists() and not full_refresh:
         try:
-            existing = pd.read_parquet(out_path)
+            existing = read_parquet_local(out_path)
             if not existing.empty and "as_of_date" in existing.columns:
                 existing_dates = set(str(x) for x in existing["as_of_date"].astype(str).tolist())
         except Exception:
