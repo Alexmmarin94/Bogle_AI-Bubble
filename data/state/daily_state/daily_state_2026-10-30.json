@@ -241,6 +241,7 @@
   "data_coverage": {
     "tiingo_tickers_loaded": [
       "BIL",
+      "BND",
       "DBC",
       "GLD",
       "IEF",
@@ -257,6 +258,7 @@
       "VGIT",
       "VGLT",
       "VGSH",
+      "VT",
       "VTI",
       "VXUS",
       "XLK"
