@@ -13,6 +13,8 @@ tickers:
   - IEMG
   - VTI
   - VXUS
+  - VT
+  - BND
 
   # Optional "cash" / short-duration proxies (context + robustness)
   - BIL
