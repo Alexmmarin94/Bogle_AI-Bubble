@@ -1,0 +1,364 @@
+{
+  "as_of_date": "2026-11-25",
+  "policy": {
+    "baseline_equity_weight": 0.8,
+    "min_equity_weight": 0.7,
+    "max_equity_weight": 0.85,
+    "max_step_pp": 2.0,
+    "allow_bond_quality_down": false,
+    "optional_sleeves": {
+      "gold": {
+        "enabled": false,
+        "band": {
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "commodities": {
+        "enabled": false,
+        "band": {
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "bitcoin": {
+        "enabled": false,
+        "band": {
+          "min": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  "market_regime": {
+    "stress_score": 57.91361035646793,
+    "stress_bucket": "MID_STRESS",
+    "persistence": {
+      "window_days": 7,
+      "required_days": 5,
+      "stress_bucket_persisted": "MID_STRESS"
+    },
+    "ecb_context": {
+      "EUR_YC_2Y": 2.108454926,
+      "EUR_YC_10Y": 2.9480486243,
+      "EUR_YC_30Y": 3.4786277869,
+      "EUR_YC_10Y_2Y_SPREAD": 0.8395936983000003,
+      "EUR_HICP_YOY": 2.1
+    }
+  },
+  "ai_cycle": {
+    "phase": "NEUTRAL",
+    "cycle": "NEUTRAL",
+    "leadership_ratios": {
+      "RSP_over_SPY": {
+        "ratio": 0.30101855727640575,
+        "ratio_90d_return": 0.058686623607768995,
+        "z": -1.18112104021498
+      },
+      "QQQ_over_SPY": {
+        "ratio": 0.8845123482628714,
+        "ratio_90d_return": -0.06644441942798518,
+        "z": 0.9079527971437331
+      },
+      "SOXX_over_SPY": {
+        "ratio": 0.17856843867727082,
+        "ratio_90d_return": -0.7582384495948394,
+        "z": -1.8582669778405707
+      },
+      "XLK_over_SPY": {
+        "ratio": 0.21737128505650896,
+        "ratio_90d_return": -0.10026227911226615,
+        "z": 1.2303819318387037
+      }
+    },
+    "ai_fundamentals_heat": 0.567550505050505,
+    "ai_fundamentals_heat_used": null,
+    "ai_fundamentals_coverage_ratio": 0.4,
+    "ai_fundamentals_used_in_signals": false
+  },
+  "tilt_signals": {
+    "primary": {
+      "EQUITY_WEIGHT_WITHIN_BAND": {
+        "direction": "TILT_AWAY",
+        "raw_direction": "TILT_AWAY",
+        "persisted_direction": "TILT_AWAY",
+        "magnitude": "LARGE",
+        "score": -0.8654608333602334,
+        "inputs": {
+          "stress_bucket": "MID_STRESS",
+          "spy_200d_trend": -0.022451694423882618,
+          "spy_momentum_3m": -0.07054856698223311,
+          "spy_momentum_12m": 0.07487196617415148,
+          "spy_realized_vol_21d_ann": 0.301863745456982,
+          "cash_yield_3m": 4.36,
+          "t10y3m": 0.51
+        },
+        "rules": {
+          "direction_thresholds": {
+            "TILT_TOWARD": "> +0.20",
+            "HOLD": "[-0.20, +0.20]",
+            "TILT_AWAY": "< -0.20"
+          },
+          "persistence": {
+            "window_days": 7,
+            "required_days": 5
+          }
+        }
+      },
+      "BOND_DURATION_WITHIN_BAND": {
+        "direction": "TILT_TOWARD",
+        "raw_direction": "TILT_TOWARD",
+        "persisted_direction": "TILT_TOWARD",
+        "magnitude": "MEDIUM",
+        "score": 0.4239527136630305,
+        "inputs": {
+          "dgs5": 4.69,
+          "dgs10": 4.91,
+          "dgs30": 5.3,
+          "dgs10_change_30d": -0.28000000000000025,
+          "rate_vol_63d": 0.0545523942537893,
+          "t10y3m": 0.51,
+          "stress_bucket": "MID_STRESS"
+        },
+        "rules": {
+          "intent": {
+            "TILT_TOWARD": "longer duration",
+            "TILT_AWAY": "shorter duration"
+          },
+          "direction_thresholds": {
+            "TILT_TOWARD": "> +0.20",
+            "HOLD": "[-0.20, +0.20]",
+            "TILT_AWAY": "< -0.20"
+          },
+          "persistence": {
+            "window_days": 7,
+            "required_days": 5
+          }
+        }
+      },
+      "TIPS_SLICE_WITHIN_BAND": {
+        "direction": "TILT_TOWARD",
+        "raw_direction": "TILT_TOWARD",
+        "persisted_direction": "TILT_TOWARD",
+        "magnitude": "SMALL",
+        "score": 0.3279547389244084,
+        "inputs": {
+          "t10y_breakeven": 2.12,
+          "t10y_breakeven_change_30d": -0.22999999999999998,
+          "dfii10_real_yield": 2.79,
+          "dfii10_real_yield_change_30d": -0.04999999999999982,
+          "t5y5y_forward_infl": 2.11
+        },
+        "rules": {
+          "intent": {
+            "TILT_TOWARD": "larger TIPS slice",
+            "TILT_AWAY": "smaller TIPS slice"
+          },
+          "direction_thresholds": {
+            "TILT_TOWARD": "> +0.20",
+            "HOLD": "[-0.20, +0.20]",
+            "TILT_AWAY": "< -0.20"
+          },
+          "persistence": {
+            "window_days": 7,
+            "required_days": 5
+          }
+        }
+      },
+      "US_WEIGHT_WITHIN_EQUITY_BAND": {
+        "direction": "TILT_AWAY",
+        "raw_direction": "TILT_AWAY",
+        "persisted_direction": "TILT_AWAY",
+        "magnitude": "SMALL",
+        "score": -0.304410211894834,
+        "inputs": {
+          "stress_bucket": "MID_STRESS",
+          "concentration_composite": 0.4674254475731184,
+          "usd_strength_z": 1.250359000010363,
+          "ai_fundamentals_heat": 0.567550505050505,
+          "ai_fundamentals_heat_used": null,
+          "ai_fundamentals_coverage_ratio": 0.4,
+          "ai_fundamentals_used_in_signals": false
+        },
+        "rules": {
+          "intent": {
+            "TILT_TOWARD": "more US equity",
+            "TILT_AWAY": "less US equity (toward ex-US)"
+          },
+          "direction_thresholds": {
+            "TILT_TOWARD": "> +0.20",
+            "HOLD": "[-0.20, +0.20]",
+            "TILT_AWAY": "< -0.20"
+          },
+          "persistence": {
+            "window_days": 7,
+            "required_days": 5
+          }
+        }
+      }
+    },
+    "optional_sleeves": {
+      "GOLD_SLEEVE_ELIGIBILITY": null,
+      "COMMODITIES_SLEEVE_ELIGIBILITY": null,
+      "BITCOIN_SLEEVE_ELIGIBILITY": null
+    }
+  },
+  "diagnostics": {
+    "notes": [
+      "SEC heat coverage too low: 2/5"
+    ],
+    "stress_score_recent": [
+      {
+        "date": "2026-11-17",
+        "stress_score": 49.79239390750789
+      },
+      {
+        "date": "2026-11-18",
+        "stress_score": 49.525754418816405
+      },
+      {
+        "date": "2026-11-19",
+        "stress_score": 51.87252662383459
+      },
+      {
+        "date": "2026-11-20",
+        "stress_score": 59.99250945806238
+      },
+      {
+        "date": "2026-11-23",
+        "stress_score": 57.83198860118567
+      },
+      {
+        "date": "2026-11-24",
+        "stress_score": 57.990205684219866
+      },
+      {
+        "date": "2026-11-25",
+        "stress_score": 57.91361035646793
+      }
+    ]
+  },
+  "data_coverage": {
+    "tiingo_tickers_loaded": [
+      "BIL",
+      "BND",
+      "DBC",
+      "GLD",
+      "IEF",
+      "IEFA",
+      "IEMG",
+      "QQQ",
+      "RSP",
+      "SCHP",
+      "SHV",
+      "SOXX",
+      "SPY",
+      "TIP",
+      "TLT",
+      "VGIT",
+      "VGLT",
+      "VGSH",
+      "VT",
+      "VTI",
+      "VXUS",
+      "XLK"
+    ],
+    "fred_series_present": [
+      "BAMLC0A0CM",
+      "BAMLH0A0HYM2",
+      "DFII10",
+      "DGS10",
+      "DGS2",
+      "DGS30",
+      "DGS3MO",
+      "DGS5",
+      "DTWEXBGS",
+      "NFCI",
+      "STLFSI4",
+      "T10Y3M",
+      "T10YIE",
+      "T5YIFR",
+      "VIXCLS"
+    ],
+    "ecb_series_present": [
+      "EUR_HICP_YOY",
+      "EUR_YC_10Y",
+      "EUR_YC_2Y",
+      "EUR_YC_30Y",
+      "GBP_PER_EUR_DAILY",
+      "JPY_PER_EUR_DAILY",
+      "USD_PER_EUR_DAILY"
+    ],
+    "last_price_date": "2026-11-25"
+  },
+  "sec_fundamentals": {
+    "as_of": "2026-11-25",
+    "basket_summary": {
+      "ai_fundamentals_heat": 0.567550505050505,
+      "companies_with_heat": 2,
+      "companies_total": 5,
+      "coverage_ratio": 0.4,
+      "heat_used_in_signals": false
+    },
+    "companies": [
+      {
+        "name": "Microsoft",
+        "cik": "0000789019",
+        "capex_to_revenue_latest": 0.12326204875615687,
+        "capex_to_revenue_asof": "2010-06-30",
+        "capex_yoy_latest": 0.4513343975537918,
+        "capex_to_revenue_percentile": null,
+        "capex_yoy_percentile": 0.8823529411764706,
+        "ai_fundamentals_heat": null,
+        "cross_sectional": null
+      },
+      {
+        "name": "Alphabet",
+        "cik": "0001652044",
+        "capex_to_revenue_latest": 0.09563843702573777,
+        "capex_to_revenue_asof": "2021-12-31",
+        "capex_yoy_latest": 0.6289417382406748,
+        "capex_to_revenue_percentile": 0.1111111111111111,
+        "capex_yoy_percentile": 0.9090909090909091,
+        "ai_fundamentals_heat": 0.51010101010101,
+        "cross_sectional": null
+      },
+      {
+        "name": "Amazon",
+        "cik": "0001018724",
+        "capex_to_revenue_latest": null,
+        "capex_to_revenue_asof": null,
+        "capex_yoy_latest": 0.4680758335149271,
+        "capex_to_revenue_percentile": null,
+        "capex_yoy_percentile": 0.5555555555555556,
+        "ai_fundamentals_heat": null,
+        "cross_sectional": null
+      },
+      {
+        "name": "Meta",
+        "cik": "0001326801",
+        "capex_to_revenue_latest": 0.1656212333653113,
+        "capex_to_revenue_asof": "2017-12-31",
+        "capex_yoy_latest": 0.37755592530966897,
+        "capex_to_revenue_percentile": 0.75,
+        "capex_yoy_percentile": 0.5,
+        "ai_fundamentals_heat": 0.625,
+        "cross_sectional": null
+      },
+      {
+        "name": "NVIDIA",
+        "cik": "0001045810",
+        "capex_to_revenue_latest": 0.14554749610257722,
+        "capex_to_revenue_asof": "2012-01-29",
+        "capex_yoy_latest": 0.4172540606803554,
+        "capex_to_revenue_percentile": null,
+        "capex_yoy_percentile": null,
+        "ai_fundamentals_heat": null,
+        "cross_sectional": null
+      }
+    ],
+    "notes": [
+      "SEC heat coverage too low: 2/5"
+    ]
+  }
+}
