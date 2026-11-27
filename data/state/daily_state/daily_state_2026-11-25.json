@@ -31,7 +31,7 @@
     }
   },
   "market_regime": {
-    "stress_score": 57.91361035646793,
+    "stress_score": 58.79766872978289,
     "stress_bucket": "MID_STRESS",
     "persistence": {
       "window_days": 7,
@@ -210,31 +210,31 @@
     "stress_score_recent": [
       {
         "date": "2026-11-17",
-        "stress_score": 49.79239390750789
+        "stress_score": 49.79237829151781
       },
       {
         "date": "2026-11-18",
-        "stress_score": 49.525754418816405
+        "stress_score": 49.525738803962
       },
       {
         "date": "2026-11-19",
-        "stress_score": 51.87252662383459
+        "stress_score": 51.87251102947753
       },
       {
         "date": "2026-11-20",
-        "stress_score": 59.99250945806238
+        "stress_score": 59.99249266691176
       },
       {
         "date": "2026-11-23",
-        "stress_score": 57.83198860118567
+        "stress_score": 57.83197154062272
       },
       {
         "date": "2026-11-24",
-        "stress_score": 57.990205684219866
+        "stress_score": 57.99018864116996
       },
       {
         "date": "2026-11-25",
-        "stress_score": 57.91361035646793
+        "stress_score": 58.79766872978289
       }
     ]
   },
